@@ -86,6 +86,11 @@ header {
     color: #186684;
 }
 
+.hero nav a:hover,
+.hero nav a:focus {
+    color: #E85B26;
+}
+
 .socialMedia {
     float: right;
     position: absolute;
@@ -101,9 +106,16 @@ header {
     margin: 10px;
 }
 
+/* .socialMedia i:hover, */
+.socialMedia i:hover,
+.socialMedia a:focus i {
+    color: #186684;
+}
+
+
+
 h1 {
     color: #186684;
-    /* font-size: calc(6rem + 5vw); */
     font-size: 14rem;
     line-height: .8;
     background-color: #E3E4EA;
@@ -111,9 +123,8 @@ h1 {
     font-weight: lighter;
     padding: 10px;
     position: absolute;
-    /* left: 535px; */
-    right: 5%;
-    top: 30%;
+    right: 10%;
+    top: 35%;
     margin-right: 100px;
 }
 
@@ -196,9 +207,7 @@ h2 {
     margin-bottom: 25px;
 }
 
-.specializeSummary a,
-.footCareSummary a,
-.givingBackSummary a {
+.readMore {
     color: #186684;
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -206,6 +215,12 @@ h2 {
     line-height: 29px;
     padding: 10px 15px;
     border: 3px solid #E85B26;
+}
+
+.readMore:hover,
+.readMore:focus {
+    background-color: #186684;
+    color: #F4F4F4;
 }
 
 .givingBack {
@@ -236,8 +251,6 @@ h2 {
     max-height: 115px;
     overflow: hidden;
 }
-
-
 
 .menuIcons {
     background-image: url("./assets/image-5@2x.png");
@@ -282,10 +295,14 @@ h2 {
 .productsIcon a,
 .communityIcon a,
 .reachOutIcon a {
+    font-family: 'Catamaran', sans-serif;
     color: #186684;
 }
 
-
+.iconWrapper a:hover,
+.iconWrapper a:focus {
+    color: #E85B26
+}
 
 .theGram {
     padding: 50px 0;
@@ -337,6 +354,11 @@ h2 {
     color: #1F2022;
 }
 
+.contactInfo a:hover,
+.contactInfo a:focus {
+    color: #E85B26  ;
+}
+
 .contactWrapper {
     width: 90%;
     margin: 0 auto;
@@ -366,7 +388,7 @@ h2 {
 
 .updated button {
     width: 25%;
-    color: white;
+    color: #F4F4F4;
     font-family: 'Catamaran', sans-serif;
     text-transform: uppercase;
     background-color: #186684;
@@ -374,10 +396,16 @@ h2 {
     border: 2px solid #E85B26;
 }
 
+.updated button:hover,
+.updated button:focus {
+    background-color: #F4F4F4;
+    color: #186684;
+}
+
 footer {
     font-family: 'Catamaran', sans-serif;
     background-color: #1F2022;
-    color: #f4f4f4;
+    color: darkgray;
     text-align: center;
     padding: 10px 0;
 }
@@ -387,9 +415,13 @@ footer {
 
 @media (max-width: 940px) {
 
-    header {
-        background-attachment: local;
-        /* background-position-x: -372px; */
+    h1 {
+        
+        width: 543px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
     }
 
     .socialMedia {
@@ -426,13 +458,11 @@ footer {
         text-align: center;
         padding-top: 10%;
         height: 400px;
- 
     }
 
     .specializeSummary h2,
     .footCareSummary h2 {
         text-align: center;
-      
     }
 
     .footCareSummary {
@@ -442,14 +472,18 @@ footer {
     .footCareImage {
         width: 100%;
     }
-
-    
-
-
-
 }
 
 @media (max-width: 768px) {
+    h1 {
+        font-size: 11rem;
+        width: 430px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+
     .givingBackImage {
         float: none;
         width: 100%;
@@ -509,6 +543,20 @@ footer {
 
 
 @media (max-width: 480px) {
+    header {
+        background-position-x: 30%;
+    }
+
+    h1 {
+        font-size: 9rem;
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        top: 50%;
+        left: 15%;
+        right: 0;
+    }
+
     .lastPic {
         display: none;
     }
