@@ -623,7 +623,9 @@ footer {
     }
 
     /* Style spans to make hamburger menu icon*/
-    .menuToggle span {
+    .topBun,
+    .meat,
+    .bottomBun {
         display: block;
         width: 35px;
         height: 5px;
@@ -660,9 +662,19 @@ footer {
         transform-origin: top left;
     }
 
+    /* Add social media icons/links to hamburger navigation menu */
+    .instagram,
+    .snapchat,
+    .facebook,
+    .twitter {
+        float: left;
+        width: 50%;
+        text-align: center;
+    }  
+
     .menuToggle input:checked ~ ul {
-        transform: none;
-        opacity: 1;
+    transform: none;
+    opacity: 1;
     }
 
     .menuToggle input ~ ul {
