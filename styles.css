@@ -17,30 +17,31 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     text-decoration: none;
 }
 
-/* remove list styles */
+/* Remove list styles */
 li {
     list-style: none;
 }
 
+/* Set default image widths */
 img {
     width: 100%;
     display: block;
 }
 
-/* make font size 10px */
+/* Make font size 10px */
 html {
     font-size: 62.5%;
     overflow-x:hidden;
 }
 
-/* set fonts and and default font size */
+/* Set fonts and and default font size */
 body {
     font-family: 'Catamaran', sans-serif;
     font-family: 'Nova Flat', cursive;
     font-size: 1.6rem;
 }
 
-/* set wrapper dimensions */
+/* Set wrapper dimensions */
 .wrapper {
     width: 100%;
     max-width: 1800px;
@@ -48,13 +49,26 @@ body {
 }
 
 
-                    /* HERO SECTION */
+/* ======== HERO SECTION ======== */
+
+/* move "Skip to main" link for accessibility */
+.skipLink {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+
+.skipLink:focus {
+    left: 0;
+}
 
 /* Hero background image */
 header {
     background-image: url("./assets/image-1@2x.png");
     background-size: cover;
-
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
@@ -62,17 +76,13 @@ header {
     margin: 0 auto;
 }
 
+/* Hide hamburger menu */
 .hamburgerMenu {
     display: none;
 }
 
-/* -------------------------------------- */
-
-
-/* ----------------------------------------------- */
+/* Styling for horizontal and hamburger navigation menus */
 .horizontalMenu ul {
-    /* width: 100%;
-    margin: 0 auto; */
     padding: 30px 0 0 0;
     text-align: center;
 }
@@ -102,6 +112,7 @@ header {
     color: #E85B26;
 }
 
+/* Styling for social media icon links */
 .socialMedia {
     float: right;
     position: absolute;
@@ -123,8 +134,7 @@ header {
     color: #186684;
 }
 
-
-
+/* Title styles */
 h1 {
     color: #186684;
     font-size: 14rem;
@@ -143,8 +153,9 @@ h1 span {
     display: block;
 }
 
-/* MAIN styles */
+/* ======== MAIN SECTION ======== */
 
+/* Styling for article images, text and "Read more" link */
 h2 {
     margin: 0;
     padding: 0;
@@ -170,7 +181,6 @@ h2 {
 
 .specializeSummary div,
 .footCareSummary div {
-    
     width: 75%;
     margin: 0 auto;
     padding-top: 10%;
@@ -189,8 +199,6 @@ h2 {
 .footCareSummary h2,
 .givingBackSummary h2 {
     color: #186684;
-    /* min-width: 340px;
-    max-height: 50px; */
     white-space: nowrap;
 }
 
@@ -198,7 +206,6 @@ h2 {
 .footCareSummary p {
     max-height: 175px;
     overflow: hidden;
-    
 }
 
 .specializeSummary p,
@@ -250,7 +257,6 @@ h2 {
 
 .givingBackImage img {
     width: 75%;
-
 }
 
 .givingBackSummary {
@@ -263,6 +269,7 @@ h2 {
     overflow: hidden;
 }
 
+/* Styling for "Products", "Community" and "Reach out" icons and links */
 .menuIcons {
     background-image: url("./assets/image-5@2x.png");
     background-position: center;
@@ -315,6 +322,7 @@ h2 {
     color: #E85B26
 }
 
+/* Styling for instagram title and gallery */
 .theGram {
     padding: 50px 0;
 }
@@ -328,7 +336,6 @@ h2 {
     text-transform: capitalize;
 }
 
-/* .gallery div, */
 .firstPic,
 .middlePic,
 .lastPic {
@@ -345,7 +352,7 @@ h2 {
     margin: 0 25px;
 }
 
-
+/* Styling for contact info and newsletter subscription link */
 .contactInfo {
     background-color: #F4F4F4;
     padding: 50px 0 ;
@@ -413,6 +420,7 @@ h2 {
     color: #186684;
 }
 
+/* Styling for copyright text in footer */
 footer {
     font-family: 'Catamaran', sans-serif;
     background-color: #1F2022;
@@ -422,12 +430,11 @@ footer {
 }
 
 
-/* First breakpoint - 960px */
+/* ======== FIRST BREAKPOINT - 940px ======== */
 
 @media (max-width: 940px) {
-
+    /* Adjust width and center title */
     h1 {
-        
         width: 543px;
         margin-left: auto;
         margin-right: auto;
@@ -435,15 +442,16 @@ footer {
         right: 0;
     }
 
+    /* Hide social media icons */
     .socialMedia {
         display: none;
     }
 
+    /* Move articles and article images to stack on top of each other */
     .specializeImage,
     .footCareImage {
         float: none;
         width: 100%;
-        /* height: 250px; */
         overflow: hidden;
     }
     
@@ -453,8 +461,6 @@ footer {
         object-fit: cover;
         object-position: 0 60%;
     }
-
-
 
     .specializeSummary,
     .footCareSummary {
@@ -485,16 +491,15 @@ footer {
     }
 }
 
+/* ======== SECOND BREAKPOINT - 768px ======== */
 @media (max-width: 768px) {
+    /* Adjust width and font size */
     h1 {
         font-size: 11rem;
         width: 430px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
     }
 
+    /* Move "Giving back" image and article to stack on top of each other */
     .givingBackImage {
         float: none;
         width: 100%;
@@ -522,17 +527,18 @@ footer {
         text-align: center;
     }
 
+    /* Move "Produc", "Community" and "Reach out" icons and links to stack on top of each other */
     .productsIcon,
     .communityIcon,
     .reachOutIcon {
         float: none;
-        /* padding: 30px 0; */
     }
 
     .communityIcon {
         padding: 60px 0;
     }
 
+    /* Move subscribe button below email input field and widen both to fill div */
     .updated input,
     .updated button {
         display: block;
@@ -546,8 +552,9 @@ footer {
     }
 }
 
-
+/* ======== THIRD BREAKPOINT - 650px ======== */
 @media (max-width: 650px) {
+    /* Move contact details and newsletter subscription sections to stack on top of each other */
     .contactDetails,
     .updated {
         float: none;
@@ -566,15 +573,15 @@ footer {
     }
 }
 
-
-
-
+/* ======== LAST BREAKPOINT - 480px ======== */
 
 @media (max-width: 480px) {
+    /* Adjust hero background image to better position shoe image */
     header {
         background-position-x: 30%;
     }
 
+    /* Offset title to the right */ 
     h1 {
         font-size: 9rem;
         width: 350px;
@@ -585,14 +592,17 @@ footer {
         right: 0;
     }
 
+    /* Hide top horizontal navigation menu links */
     .horizontalMenu ul {
         visibility: hidden;
     }
 
+    /* Display hamburger menu */
     .hamburgerMenu {
         display: block;
     }
 
+    /* Set toggle for hamburger menu */
     .menuToggle {
         display: block;
         position: relative;
@@ -612,6 +622,7 @@ footer {
         z-index: 2;
     }
 
+    /* Style spans to make hamburger menu icon*/
     .menuToggle span {
         display: block;
         width: 35px;
@@ -620,21 +631,15 @@ footer {
         position: relative;
         background-color: #186684;
         border-radius: 3px;
-
     }
 
+    /* Animate top and bottom lines of hamburger menu to expand when selected */
     .topBun {
         transition: transform 0.5s ease-in-out;
     }
 
     .bottomBun {
         transition: transform 0.5s ease-in-out;
-    }
-
-
-    /* Why doesn't this work? */
-    .menuToggle input:checked .menuToggle input {
-        height: 45px ;
     }
 
     .menuToggle input:checked ~ .topBun {
@@ -645,6 +650,7 @@ footer {
         transform: translate(0, 10px);
     }
 
+    /* Make menu links slide in from the right and have transparency fade in/out */
     .hamburgerMenu ul {
         position: absolute;
         opacity: 0;
@@ -652,7 +658,6 @@ footer {
         opacity 0.8s ease;
         transform: translateX(100%);
         transform-origin: top left;
-        /* background-color: red; */
     }
 
     .menuToggle input:checked ~ ul {
@@ -664,16 +669,18 @@ footer {
         opacity: 0;
     }
 
+    /* Style hamburger menu links */
     .hamburgerMenu li {
         font-size: 2rem;
         margin-top: 20px;
     }
 
-
+    /* Hide last image in instagram gallery */
     .lastPic {
         display: none;
     }
 
+    /* Adjust sizing and styling for instagram gallery images */
     .firstPic,
     .middlePic,
     .lastPic {
@@ -693,6 +700,7 @@ footer {
         margin: 0;
     }
 
+    /* Spread out footer navigation menu links */
     .contactInfo nav {
         width: 90%;
         margin: 0 auto;
@@ -703,7 +711,7 @@ footer {
         width: 25%;
     }
 
-/* Add margin to the "About" and "Blog" navigation menu (used nth-child for practice)  */
+    /* Add margin to the "About" and "Blog" navigation menu (used nth-child for practice)  */
     .footerNav li:nth-child(2) {
         margin: 0 15px 0 30px;
     }
@@ -711,7 +719,4 @@ footer {
     .footerNav li:nth-child(3) {
         margin: 0 30px 0 15px;
     }
-
-    
-
 }
