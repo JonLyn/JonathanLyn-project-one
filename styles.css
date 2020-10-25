@@ -103,6 +103,7 @@ header {
 .horizontalMenu a,
 .hamburgerMenu a {
     color: #186684;
+    transition: color 0.4s ease;
 }
 
 .horizontalMenu a:hover,
@@ -126,6 +127,7 @@ header {
     color: #E85B26;
     font-size: 2rem;
     margin: 10px;
+    transition: color 0.4s ease;
 }
 
 /* .socialMedia i:hover, */
@@ -233,6 +235,7 @@ h2 {
     line-height: 29px;
     padding: 10px 15px;
     border: 3px solid #E85B26;
+    transition: background-color 0.5s ease
 }
 
 .readMore:hover,
@@ -315,6 +318,7 @@ h2 {
 .reachOutIcon a {
     font-family: 'Catamaran', sans-serif;
     color: #186684;
+    transition: color 0.4s ease;
 }
 
 .iconWrapper a:hover,
@@ -370,6 +374,7 @@ h2 {
 
 .contactInfo a {
     color: #1F2022;
+    transition: color 0.4s ease;
 }
 
 .contactInfo a:hover,
@@ -412,6 +417,7 @@ h2 {
     background-color: #186684;
     padding: 10px 0;
     border: 2px solid #E85B26;
+    transition: background-color 0.5s ease;
 }
 
 .updated button:hover,
@@ -622,6 +628,11 @@ footer {
         z-index: 2;
     }
 
+    .menuToggle ul {
+        background-color: rgba(227, 228,234, 60%);
+        width: 90px;
+    }
+
     /* Style spans to make hamburger menu icon*/
     .topBun,
     .meat,
@@ -645,11 +656,11 @@ footer {
     }
 
     .menuToggle input:checked ~ .topBun {
-        transform: translate(0, -10px);
+        transform: translate(0, -5px);
     }
 
     .menuToggle input:checked ~ .bottomBun {
-        transform: translate(0, 10px);
+        transform: translate(0, 5px);
     }
 
     /* Make menu links slide in from the right and have transparency fade in/out */
