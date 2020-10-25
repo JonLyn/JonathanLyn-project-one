@@ -62,32 +62,72 @@ header {
     margin: 0 auto;
 }
 
-.hero nav ul {
+.hamburgerMenu {
+    /* display: none; */
+}
+
+/* -------------------------------------- */
+.menuToggle {
+    display: block;
+    position: relative;
+    left: 80%;
+    top: -30px;
+}
+
+.menuToggle input {
+    display: block;
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+
+    opacity: 0;
+
+    z-index: 2;
+}
+
+.menuToggle span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: #186684;
+    border-radius: 3px;
+
+}
+
+
+
+/* ----------------------------------------------- */
+.horizontalMenu ul {
     /* width: 100%;
     margin: 0 auto; */
     padding: 30px 0 0 0;
     text-align: center;
 }
 
-.hero nav li {
+.horizontalMenu li {
     display: inline-block;
     margin: 0 20px;
     color: #186684;
 }
 
-.hero nav a,
+.horizontalMenu a,
 .contactInfo a {
-   font-weight: 400;
+    font-weight: 400;
     font-size: 2rem;
     line-height: 2.9rem;     
 }
 
-.hero nav a {
+.horizontalMenu a {
     color: #186684;
 }
 
-.hero nav a:hover,
-.hero nav a:focus {
+.horizontalMenu a:hover,
+.horizontalMenu a:focus {
     color: #E85B26;
 }
 
@@ -556,6 +596,11 @@ footer {
         left: 15%;
         right: 0;
     }
+
+
+
+
+
 
     .lastPic {
         display: none;
