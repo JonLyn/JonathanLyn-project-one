@@ -547,7 +547,24 @@ footer {
 }
 
 
+@media (max-width: 650px) {
+    .contactDetails,
+    .updated {
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
 
+    .contactDetails {
+        margin-bottom: 30px;
+    }
+
+    .contactDetails h2,
+    .updated h2 {
+        margin-bottom: 20px;
+    }
+}
 
 
 
@@ -653,9 +670,6 @@ footer {
     }
 
 
-
-
-
     .lastPic {
         display: none;
     }
@@ -689,6 +703,7 @@ footer {
         width: 25%;
     }
 
+/* Add margin to the "About" and "Blog" navigation menu (used nth-child for practice)  */
     .footerNav li:nth-child(2) {
         margin: 0 15px 0 30px;
     }
@@ -697,5 +712,6 @@ footer {
         margin: 0 30px 0 15px;
     }
 
+    
 
 }
