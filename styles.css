@@ -63,42 +63,10 @@ header {
 }
 
 .hamburgerMenu {
-    /* display: none; */
+    display: none;
 }
 
 /* -------------------------------------- */
-.menuToggle {
-    display: block;
-    position: relative;
-    left: 80%;
-    top: -30px;
-}
-
-.menuToggle input {
-    display: block;
-    width: 35px;
-    height: 30px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-
-    opacity: 0;
-
-    z-index: 2;
-}
-
-.menuToggle span {
-    display: block;
-    width: 35px;
-    height: 5px;
-    margin-bottom: 5px;
-    position: relative;
-    background-color: #186684;
-    border-radius: 3px;
-
-}
-
 
 
 /* ----------------------------------------------- */
@@ -122,12 +90,15 @@ header {
     line-height: 2.9rem;     
 }
 
-.horizontalMenu a {
+.horizontalMenu a,
+.hamburgerMenu a {
     color: #186684;
 }
 
 .horizontalMenu a:hover,
-.horizontalMenu a:focus {
+.horizontalMenu a:focus,
+.hamburgerMenu a:hover,
+.hamburgerMenu a:focus {
     color: #E85B26;
 }
 
@@ -597,6 +568,89 @@ footer {
         right: 0;
     }
 
+    .horizontalMenu ul {
+        visibility: hidden;
+    }
+
+    .hamburgerMenu {
+        display: block;
+    }
+
+    .menuToggle {
+        display: block;
+        position: relative;
+        left: 80%;
+        top: -20px;
+    }
+
+    .menuToggle input {
+        display: block;
+        width: 35px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    .menuToggle span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        margin-bottom: 5px;
+        position: relative;
+        background-color: #186684;
+        border-radius: 3px;
+
+    }
+
+    .topBun {
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .bottomBun {
+        transition: transform 0.5s ease-in-out;
+    }
+
+
+    /* Why doesn't this work? */
+    .menuToggle input:checked .menuToggle input {
+        height: 45px ;
+    }
+
+    .menuToggle input:checked ~ .topBun {
+        transform: translate(0, -10px);
+    }
+
+    .menuToggle input:checked ~ .bottomBun {
+        transform: translate(0, 10px);
+    }
+
+    .hamburgerMenu ul {
+        position: absolute;
+        opacity: 0;
+        transition: transform 0.8s ease,
+        opacity 0.8s ease;
+        transform: translateX(100%);
+        transform-origin: top left;
+        /* background-color: red; */
+    }
+
+    .menuToggle input:checked ~ ul {
+        transform: none;
+        opacity: 1;
+    }
+
+    .menuToggle input ~ ul {
+        opacity: 0;
+    }
+
+    .hamburgerMenu li {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
 
 
 
