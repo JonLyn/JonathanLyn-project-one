@@ -8,6 +8,27 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .srOnly { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+/* Colour palette */
+    /* Pale lilac 89
+    #E3E4EA 89%
+    227, 228, 234, 89% */
+
+    /* Reddish orange
+    #E85B26
+    232, 91, 38 */
+
+    /* Light grey
+    #F4F4F4
+    244, 244, 244 */
+
+    /* Light navy
+    #186684
+    24, 102, 132 */
+
+    /* Dark grey
+    #1F2022
+    31, 32, 34 */
+
 
 /* Reset styles */
 * {
