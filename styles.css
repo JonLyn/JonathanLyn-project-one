@@ -652,7 +652,6 @@ footer {
     .menuToggle ul {
         background-color: rgba(227, 228,234, 60%);
         width: 90px;
-        border-radius: 0 25px 25px 25px;
         padding-bottom: 10px;
     }
 
